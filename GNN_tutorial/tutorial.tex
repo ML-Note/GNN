@@ -1,0 +1,94 @@
+% @File    : c:\Users\Administrator\Desktop\GNN\tutorial\tutorial.tex
+ % @Date    : 2020-12-05 22:34:41
+ % @Author  : RankFan
+ % @Email   : 1917703489@qq.com
+ % -----
+ % Last Modified: 2020-12-06 20:23:04
+ % Modified By: Rank_fan
+ % -----
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+ \documentclass[11pt]{article}
+ 
+ \usepackage{ctex}
+%  \usepackage{amsthm}
+ \usepackage{amsmath}
+ \usepackage{booktabs}
+ \usepackage{amsthm}
+%  \usepackage{ntheorem}
+ \usepackage{xcolor}
+ \usepackage{graphicx}
+ \usepackage{amssymb}
+ \usepackage{authblk}
+ \usepackage{tikz}
+ 
+ \tikzset{>=stealth}
+ \usetikzlibrary{arrows,shapes,positioning,matrix}
+
+ \usepackage[left=2cm,right=2cm,top=2.5cm,bottom=3cm]{geometry}
+ \usepackage[bookmarks, bookmarksnumbered ,colorlinks, linkcolor = blue, citecolor = myred ]{hyperref}
+ \definecolor{myred}{rgb}{153, 0, 0}
+
+ \newcommand*{\email}[1]{%
+    \normalsize\href{mailto:#1}{#1}\par
+    }
+    \newcommand{\tikzmark}[3][]
+    {\tikz[remember picture, baseline]
+      \node [anchor=base,#1](#2) {#3};}
+
+
+
+
+
+ \numberwithin{equation}{section}
+ \numberwithin{figure}{section}
+
+ \graphicspath{{figures/}}
+
+ %%================================== 设置中文字体 ================================%
+\xeCJKsetup{AutoFakeBold=true}
+\setCJKmainfont{FZShuSong-Z01}[BoldFont={FZHei-B01},ItalicFont={FZKai-Z03}]
+%\setCJKmainfont{FZHei-B01}
+\setCJKsansfont{FZHei-B01}
+\setCJKmonofont{FZShuSong-Z01}
+% \setCJKfamilyfont{zhfs}{FZFangSong-Z02}
+% \setCJKfamilyfont{zhli}{FZLiShu-S01}
+% \setCJKfamilyfont{zxzt}{FZShuSong-Z01}
+% \setCJKfamilyfont{FZDH}{FZHei-B01}
+%\newcommand*{\fangsong}{\CJKfamily{zhfs}}
+%================================== 设置英文字体 ================================%TeX Gyre Pagella
+%\setmainfont[Mapping=tex-text]{Times New Roman}%--------------------------------英文衬线字体
+\setmainfont{TeX Gyre Pagella}
+
+ \title{Graph Neutral Networks}
+ \author{Rank}
+ \affil{公众号：经济知识综合 \\ \email{fanxiaolong98@gmail.com}}
+ 
+ \begin{document}
+%================================== 自定义样式 
+ \newtheoremstyle{mydef}% name
+ {\topsep}% measure of space to leave above the theorem. E.g.: 3pt
+ {\topsep}% measure of space to leave below the theorem. E.g.: 3pt
+ {\upshape}% name of font to use in the body of the theorem
+ {0.5pt}% measure of space to indent
+ {\bfseries}% name of head font
+ {: }% punctuation between head and body
+ { }% space after theorem head; " " = normal interword space
+ {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+
+\theoremstyle{mydef}
+
+\newtheorem{myExample}{Example}[section]
+\newtheorem{myRemark}{Remark}[section]
+\newtheorem{mydef}{Definiton}[section]
+
+    \maketitle
+    \tableofcontents
+    \newpage
+    \input{sections/Embedding.tex}
+    \input{sections/Convolution.tex}
+    \input{sections/Graph-Structure.tex}
+    \input{sections/GCN.tex}
+    \input{sections/GAT.tex}
+    \input{sections/GraphSAGE.tex}
+    \end{document} 
