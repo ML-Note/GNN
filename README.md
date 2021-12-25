@@ -1,4 +1,9 @@
 # GNN
+
+博客记录：https://www.cnblogs.com/RankFan/p/GNN_slide.html
+
+----
+
 图神经网络
 - https://github.com/thunlp/GNNPapers
 
